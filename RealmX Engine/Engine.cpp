@@ -1,5 +1,5 @@
 #include "Engine.h"
-#include <iostream>
+#include "TextureManager.h"
 
  Engine* Engine::s_Instance = nullptr;
 
@@ -25,18 +25,21 @@ bool Engine::Init()
 		return false;
 	}
 
+	TextureManager::GetInstance()->Load("tree", "assets/tree.png");
+
 	return m_IsRunning = true;
 }
 
 void Engine::Update()
 {
-	SDL_Log("RUNNING UPDATE");
+	// Update game logic here
 }
 
 void Engine::Render()
 {
 	SDL_SetRenderDrawColor(m_Renderer, 50, 80, 125, 255);
 	SDL_RenderClear(m_Renderer);
+	TextureManager::GetInstance()->Draw("tree", 100, 100, 400, 643);
 	SDL_RenderPresent(m_Renderer);
 }
 
@@ -57,6 +60,11 @@ void Engine::Events()
 
 bool Engine::Clean()
 {
+	TextureManager::GetInstance()->Clean();
+	SDL_DestroyRenderer(m_Renderer);
+	SDL_DestroyWindow(m_Window);
+	IMG_Quit();
+	SDL_Quit();
 	return false;
 }
 
