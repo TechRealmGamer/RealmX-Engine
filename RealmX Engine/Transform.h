@@ -7,7 +7,7 @@ public:
 	Vector2D position;
 
 	// constructor
-	Transform(float x = 0, float y = 0) : position(x, y) {}
+	Transform(Vector2D pos) : position(pos) {}
 
 private:
 	// position - setter and getter

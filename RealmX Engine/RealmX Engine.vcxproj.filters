@@ -28,7 +28,7 @@
     <Filter Include="Source Files\Physics">
       <UniqueIdentifier>{bf039cab-dbf5-4e0b-8ad3-2b48f2d2bb02}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Transform">
+    <Filter Include="Header Files\GameObject">
       <UniqueIdentifier>{e5259d3c-31b3-4819-bfb4-53c07fe9695c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -51,10 +51,16 @@
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="Vector2D.h">
-      <Filter>Header Files\Transform</Filter>
+      <Filter>Header Files\GameObject</Filter>
     </ClInclude>
     <ClInclude Include="Transform.h">
-      <Filter>Header Files\Transform</Filter>
+      <Filter>Header Files\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="IObject.h">
+      <Filter>Header Files\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files\GameObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
