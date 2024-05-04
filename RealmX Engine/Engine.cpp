@@ -1,5 +1,7 @@
 #include "Engine.h"
 #include "TextureManager.h"
+#include "Vector2D.h"
+#include "Transform.h"
 
  Engine* Engine::s_Instance = nullptr;
 
